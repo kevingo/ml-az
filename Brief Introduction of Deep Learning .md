@@ -3,6 +3,11 @@
 - Goodness of function
 - Pick the best function
 
+# Neural
+- 一個 Neural 做的事情就是根據 input，乘上 weight 相加後，加上一個 bias，再通過 activation function 計算出 output
+
+![image](https://raw.githubusercontent.com/kevingo/ml-az/master/screenshots/neural.png)
+
 # Neural Network
 - 不同的連接方法會產生不同的 network structure
 - 每一個 neural network 都有自己的 weight 和 bias，這些通通集合起來叫做 parameters
@@ -70,13 +75,15 @@ Matrix-Matrix Multiplication](https://graphics.stanford.edu/papers/gpumatrixmult
 
 ![image](https://github.com/kevingo/ml-az/blob/master/screenshots/totalloss.png?raw=true)
 
-# Gradient Descent
+# Gradient Descent（梯度下降算法)
+- Gradient 會告訴我們往哪個方向會增加計算出來的 output，我們的目標是要最小化 total loss function，所以要往反方向走（加個負號)
 - 要 minimum total loss 所用的方法就是 gradient descent
 - 做法是，首先先隨機給訂一組初始參數，接著去計算他的 gradient(去計算每個參數對 total loss 的偏微分)，把這些偏微分集合起來叫做 gradient
--  接著可以更新參數，把每個參數去減掉一個 learning rate 得到新的參數
--  接著就反覆以上步驟就可以找到一組比較好的參數
+- 接著可以更新參數，把每個參數去減掉一個 learning rate 得到新的參數
+- 接著就反覆以上步驟就可以找到一組比較好的參數
 
 # Backpropagation
+- Back Propagation 利用 Chain Rule 的特性，反向的更新權重
 - 現在有許多的 tools 可以幫助你算 backpropagation(有效計算偏微分)，因為我們有許多的參數，如果要替每一個參數去算偏微分是相當花時間的
 
 ![image](https://github.com/kevingo/ml-az/blob/master/screenshots/backpropagation.png?raw=true)
